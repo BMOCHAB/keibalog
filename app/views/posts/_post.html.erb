@@ -1,0 +1,53 @@
+<div class="containers">
+	<div class="section">
+
+		<!--   投稿一覧   -->
+
+		<div class="row">
+			<h2 class="center brown-text"><i class="material-icons">recently</i></h2>
+		</div>
+
+		<% @posts.each do |post| %>
+			<div class="col s12 m4">
+
+				<div class="icon-block" style="background-image: url(<%= post.image %>);">
+					<h4 class="center">
+						<%= post.title %>
+					</h4>
+						<div class="more">
+							<span class="liststar">★</span>
+							<ul class="more_list">
+							            <li class="usermenu">
+              <%= link_to '詳細', "/posts/#{post.id}", :class => "behind",method: :get %>
+            </li>
+            					<% if user_signed_in? && current_user.id == post.user_id %>
+								<li class="usermenu">
+									<%= link_to '編集', "/posts/#{post.id}/edit", :class => "behind", method: :get %>
+								</li>
+								<li class=usermenu>
+									<%= link_to '削除', "/posts/#{post.id}",  :class => "behind", method: :delete %>
+								</li>
+	<% end %>
+							</ul>
+						</div>
+				
+
+							<div class="postcontents">
+								<p class="lights">
+									<%= post.text %>
+								</p>
+								
+								</div>
+								<span class="name">
+							From
+								<br>
+								<%= post.user.nickname %>
+									</span>
+					
+				</div>
+			</div>
+			<% end %>
+				<%= paginate(@posts) %>
+	</div>
+</div>
+

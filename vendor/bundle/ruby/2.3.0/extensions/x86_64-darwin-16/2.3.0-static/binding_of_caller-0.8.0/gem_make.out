@@ -1,0 +1,16 @@
+current directory: /Users/mocha/projects/rails/keibalog/vendor/bundle/ruby/2.3.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+/Users/mocha/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20181103-76371-z51r1g.rb extconf.rb
+
+current directory: /Users/mocha/projects/rails/keibalog/vendor/bundle/ruby/2.3.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+current directory: /Users/mocha/projects/rails/keibalog/vendor/bundle/ruby/2.3.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+make "DESTDIR="
+echo "Nada."
+Nada.
+
+current directory: /Users/mocha/projects/rails/keibalog/vendor/bundle/ruby/2.3.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+make "DESTDIR=" install
+echo "Nada."
+Nada.

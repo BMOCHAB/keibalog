@@ -1,0 +1,15 @@
+<div class="contents-row-new" >
+  <%= form_tag('/posts', method: :post) do %>
+    <h3 class="new-post-h3">
+      Post!
+    </h3>
+    
+    <hr>
+    <div class = "forms">
+    <input placeholder="Title※英語推奨　日本語はフォントがダサいので" type="text" name="title" >
+    <input placeholder="Image Url" type="text" name="image" >
+    <textarea cols="400" name="text" placeholder="text" rows="10" class="new-input"></textarea>
+    <input type="submit" value="SENT!" class="sentbutton">
+  <% end %>
+	</div>
+</div>

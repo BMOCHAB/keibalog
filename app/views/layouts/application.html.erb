@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Keibalog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet">
+  </head>
+
+  <body>
+
+<body>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="/posts" class="brand-logo">KeibaLog</a>
+      
+      <ul class="right hide-on-med-and-down head-navbar">
+       <% if user_signed_in? %>
+        <li class="user_nav grid-6">
+
+                <a href="/users/<%= current_user.id %>">My Page</a>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+          <a class="post" href="/posts/new">Post</a>
+        </li>
+      <% else %>
+        <li class="grid-6">
+          <%= link_to "Log in", new_user_session_path, class: 'post' %>
+          <%= link_to "Sign UP", new_user_registration_path, class: 'post' %>
+        </li>
+      <% end %>
+      </ul>
+      
+    </div>
+  </nav>
+
+<%= yield %>
+
+
+<div class="widthcoverfotter">
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Made by Mocha</h5>
+          <p class="grey-text text-lighten-4">
+Anyway, I will do all the things I can do for the things I should do. As a result, I think that it would be nice to be able to race like exciting people looking at us</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Bibliography</h5>
+          <ul>
+            <li><a class="white-text" href="http://www.netkeiba.com/" target="_blank">NetKeiba.com</a></li>
+            <li><a class="white-text" href="http://www.jra.go.jp/" target="_blank">JRA</a></li>
+            <li><a class="white-text" href="https://keiba.yahoo.co.jp/" target="_blank">SportsNav</a></li>
+            <li><a class="white-text" href="http://sp.keiba.go.jp/" target="_blank">sp.Keiba</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Recommended</h5>
+          <ul>
+            <li><a class="white-text" href="https://www.youtube.com/watch?v=S4F3gJzMizM" target="_blank">Silence Suzuka</a></li>
+            <li><a class="white-text" href="https://www.youtube.com/watch?v=C8rK2lC2ngs" target="_blank">Orfevre</a></li>
+            <li><a class="white-text" href="https://www.youtube.com/watch?v=dBvLdaanx9g" target="_blank">Jentil Donna</a></li>
+            <li><a class="white-text" href="https://www.youtube.com/watch?v=VAEWJn4a45I" target="_blank">Vodka</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="#">Mocha Nishiyama</a>
+      </div>
+    </div>
+  </footer>
+  
+  
+  
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+	</div>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+ <div class="contents-row-new" >
+    <%= form_tag("/posts/#{@post.id}", method: :patch ) do %>
+    <h3 class="new-post-h3">
+      Edit!
+    </h3>
+     <hr>
+         <div class = "forms">
+      <input placeholder="Image Url" type="text" name="image" value="<%= @post.image %>" autofocus="true">
+      <textarea cols="30" name="text" placeholder="text" rows="10" class="new-input"><%= @post.text %></textarea>
+       <input type="submit" value="SENT!" class="sentbutton">
+    <% end %>
+  </div>
+</div>

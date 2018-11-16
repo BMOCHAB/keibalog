@@ -51,9 +51,15 @@ gem 'materialize-sass'
 gem 'kaminari'
 gem 'devise'
 	
-	
-#gem 'sqlite3'
-gem 'pg'
+
+
+group :development, :test do
+  gem 'sqlite3' #do ~ end内部に追加。他のgemは残してください。
+end
+
+group :production do
+  gem 'pg'
+end
 	
 	
 end

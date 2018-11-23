@@ -35,7 +35,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'sqlite3'
+
 end
+
+group :production do
+  gem 'pg', '0.20.0'
+end
+
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
@@ -43,26 +50,11 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
 
 gem 'pry-rails'
 gem 'compass-rails','~> 2.0'
 gem 'sprockets', '2.11.0'
 gem 'materialize-sass'
-gem 'kaminari'
 gem 'devise'
-	
-
-
-group :development, :test do
-  gem 'sqlite3' #do ~ end内部に追加。他のgemは残してください。
-end
-
-group :production do
-  gem 'pg'
-end
-	
-	
-end
-
-
-
+gem 'kaminari'

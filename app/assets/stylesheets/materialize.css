@@ -9332,7 +9332,7 @@ input[type=range]::-ms-thumb {
 
 /* Media Queries */
 
-@mdia only screen and (min-width: 601px) {
+@media only screen and (min-width: 601px) {
 	.timepicker-modal {
 		max-width: 600px;
 	}
